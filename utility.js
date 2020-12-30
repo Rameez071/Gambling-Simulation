@@ -29,14 +29,19 @@ class Gambling {
     }
     return this.STAKE;
     }
+
     //To calculate the loss and win amount for 20 days.
     amountWinOrLost = () => {
-    	for (let i = 0; i < 20; i++) {
-    	    this.checkResult();
+        let stakeRecord = 0;
+        let gamblingRecord = [];
+        for (let i = 1; i < 21; i++) {
+            console.log('Stake for day ' + i);
+            let dayAmount = this.checkResult();
+            stakeRecord = stakeRecord + dayAmount;
+            console.log(gamblingRecord[i] = "dayAmount= " + dayAmount, "stakeRecord= " + stakeRecord);
+        }
 
-    	}
-    	console.log('Winning amount for 20 days: ' + this.win);
-    	console.log('loss amount for 20 days: ' + this.loss);
-}
+
+    }
 }
 module.exports = new Gambling();
