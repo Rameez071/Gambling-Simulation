@@ -1,2 +1,2 @@
 let Utility = require("./utility");
-Utility.checkResult();
+console.log(Utility.checkResult());
